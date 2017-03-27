@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lazy Load</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<h1>Lazy load</h1>
+<div class="img-blur-loader"  style="height: 500px; width: 500px" data-src="http://res.cloudinary.com/science-polish-perspectives/image/upload/c_scale,h_1600,w_1600/v1490535420/original_zrmpbh.png">
+    <noscript><img src="http://res.cloudinary.com/science-polish-perspectives/image/upload/v1490535420/original_zrmpbh.png"></noscript>
+    <img class="preview" src="http://res.cloudinary.com/science-polish-perspectives/image/upload/c_scale,h_32,w_32/v1490535420/original_zrmpbh.png">
+</div>
+<!-- divider -->
+<div style="height: 100px; width: 100%"></div> 
+<!-- background imgs -->
+<div class="bg-img-blur-loader" style="width: 100%; height:300px" data-src="http://res.cloudinary.com/science-polish-perspectives/image/upload/c_scale,h_1600,w_1600/v1490535420/original_zrmpbh.png">
+<!-- regular background image resulting in degraded UX. -->
+<noscript>
+    <div class="bg-img" style="background-image: url(http://res.cloudinary.com/science-polish-perspectives/image/upload/c_scale,h_1600,w_1600/v1490535420/original_zrmpbh.png)"></div>
+</noscript>
+<div class="preview bg-img" , style="background-image: url(http://res.cloudinary.com/science-polish-perspectives/image/upload/c_scale,h_32,w_32/v1490535420/original_zrmpbh.png);" >
+</div>
+</div>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
